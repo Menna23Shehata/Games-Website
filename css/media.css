@@ -1,0 +1,62 @@
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 767px) { 
+    .container{
+        width: 100%;
+    }
+    .card-footer{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .card{
+        margin: 15px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .card-footer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card-footer small:last-child{
+        margin-top: 7px;
+    }
+    .card{
+        margin: 0;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container{
+        width: 88%;
+    }
+    .card-footer{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card-footer small:last-child{
+        margin-top: 0;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container{
+        width: 77%;
+    }
+    .card-footer{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+}

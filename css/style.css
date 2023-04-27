@@ -1,0 +1,262 @@
+/* START OF THE SHARED STYLE */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #009bb7;
+    --secondry-color: #771455;
+}
+
+.bg-img {
+    background-image: url(../imgs/bg.jpg);
+}
+
+.bg-layer {
+    background-color: rgba(0, 0, 0, 0.53);
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.cursor-default{
+    cursor: default;
+}
+/* END OF THE SHARED STYLE */
+
+/* START LOADER */
+#loader {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.loader {
+    position: relative;
+    width: 75px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--secondry-color) 50px, transparent 0),
+        linear-gradient(#8a1762 50px, transparent 0),
+        linear-gradient(#941569 50px, transparent 0),
+        linear-gradient(#a11773 50px, transparent 0),
+        linear-gradient(var(--secondry-color) 50px, transparent 0);
+    background-size: 8px 100%;
+    background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px;
+    animation: pillerPushUp 4s linear infinite;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--main-color);
+    border-radius: 50%;
+    animation: ballStepUp 4s linear infinite;
+}
+
+@keyframes pillerPushUp {
+
+    0%,
+    40%,
+    100% {
+        background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px
+    }
+
+    50%,
+    90% {
+        background-position: 0px 50px, 15px 58px, 30px 66px, 45px 78px, 60px 90px
+    }
+}
+
+@keyframes ballStepUp {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    5% {
+        transform: translate(8px, -14px)
+    }
+
+    10% {
+        transform: translate(15px, -10px)
+    }
+
+    17% {
+        transform: translate(23px, -24px)
+    }
+
+    20% {
+        transform: translate(30px, -20px)
+    }
+
+    27% {
+        transform: translate(38px, -34px)
+    }
+
+    30% {
+        transform: translate(45px, -30px)
+    }
+
+    37% {
+        transform: translate(53px, -44px)
+    }
+
+    40% {
+        transform: translate(60px, -40px)
+    }
+
+    50% {
+        transform: translate(60px, 0)
+    }
+
+    57% {
+        transform: translate(53px, -14px)
+    }
+
+    60% {
+        transform: translate(45px, -10px)
+    }
+
+    67% {
+        transform: translate(37px, -24px)
+    }
+
+    70% {
+        transform: translate(30px, -20px)
+    }
+
+    77% {
+        transform: translate(22px, -34px)
+    }
+
+    80% {
+        transform: translate(15px, -30px)
+    }
+
+    87% {
+        transform: translate(7px, -44px)
+    }
+
+    90% {
+        transform: translate(0, -40px)
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+/* END LOADER */
+
+/* START OF NAVBAR STYLE */
+.navbar {
+    font-weight: 600;
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+
+.navbar-brand {
+    font-family: "Tilt Prism", cursive;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link.active ,.nav-link:focus, .nav-link:hover{
+    color: var(--secondry-color);
+}
+.nav-link:focus, .nav-link:hover {
+    transition: all 0.3s;
+}
+.navbar-brand:focus, .navbar-brand:hover {
+    color: white;
+}
+/* START OF NAVBAR STYLE */
+
+/* START OF GAMES BODY */
+.card,
+.card-footer {
+    border: 1px solid var(--main-color);
+    background-color: rgba(0, 0, 0, 0.83);
+}
+
+.card {
+    filter: grayscale(0.7);
+    transition: transform 0.5s, filter 0.5s 0.1s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
+}
+
+.card-title {
+    font-family: "Chakra Petch", sans-serif;
+    letter-spacing: 2px;
+    color: aqua;
+}
+
+.card-text {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.badge {
+    background-color: var(--main-color);
+    color: var(--secondry-color) !important;
+    font-weight: 700;
+}
+
+/* END OF GAMES BODY */
+
+/* START OF THE GAME DETAILS */
+.details {
+    background-color: rgba(0, 0, 0, 0.955);
+    /* backdrop-filter: blur(4px); */
+    /* min-height: 100vh; */
+    overflow-y: scroll;    
+}
+
+
+.details header h3{
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.btn {
+    transition: all 0.45s;
+    width: 25%;
+    margin-block: 7px;
+}
+
+#detailsContent .btn:hover {
+    color: var(--secondry-color);
+    font-weight: 700;
+    background-color: var(--main-color);
+}
+
+#detailsContent .col-md-8 h3 {
+    font-family: "Cookie", cursive;
+    font-size: 3rem;
+}
+
+#detailsContent .col-md-8 p,
+#detailsContent .col-md-8 a {
+    font-family: "Macondo", cursive;
+}
+
+/* END OF THE GAME DETAILS */
